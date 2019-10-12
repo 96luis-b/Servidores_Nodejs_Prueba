@@ -1,0 +1,1 @@
+aqui se agregaran las carpetas con archivos estatiscos, como: css, img, videos, audio, musicas, etc.
