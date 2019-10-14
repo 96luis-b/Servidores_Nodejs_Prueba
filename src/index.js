@@ -6,8 +6,8 @@ const path = require('path');
 
 // settings
 app.set('port', 3000);
-app.set('views', path.join(__dirname, 'views'));
-// app.engine('html', require('ejs').renderFile);   //esta configuracion sirve para que el motor de plantillas ejs procese directamente los archivos html
+app.set('views', path.join(__dirname, './src/public/views'));
+ app.engine('html', require('ejs').renderFile);   //esta configuracion sirve para que el motor de plantillas ejs procese directamente los archivos html
     // settings view engine  agregar nuevas funcionalidades
     //      a las ventalas html
 app.set('view engine', 'ejs');
@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 // middlewares
 
 // routes
-app.use(require('../routes/index'));
+app.use(require('./routes/index'));
 
 /*
 app.get('/', (req, res)=>{

@@ -1,0 +1,68 @@
+
+.lienzo{
+    position: absolute;
+    top:3.8%;
+    left: 25.6%;
+    width: 2%;
+    height: 2rem;
+}
+
+.triangulo {
+	position: absolute;
+	top:-70%;
+	left: 0;
+    height:0px;
+    width:0px;
+	border-left: 5.7rem solid rgba(228, 11, 11, 0.842);
+	border-top: 5.2rem solid transparent;
+    border-bottom: 5.2rem solid transparent;
+    opacity: 0;
+    transform-origin: 0% 30%;  
+    animation: un_latido 1s 1;   
+
+}
+/*
+.pulso {
+	position: absolute;
+	top:35px;
+	left: 370px;
+    height:0px;
+    width:20px;
+	margin: 25px auto;
+	border-left: 20px solid #514ef0;
+	border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    transform: scale(1, 1);
+	transform-origin: 50% 50%;
+    animation: un_latido 2s infinite; 
+    
+}
+*/
+@keyframes un_latido{
+	0% {
+        transform: scale(0, 0);
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(0.5, 0.5);
+      }
+}
+
+
+
+.latido_logo{
+    animation: letter_logo 1s ;   
+}
+
+@keyframes letter_logo{
+	0% {
+        text-shadow: 2px 2px 3px black, 4px 4px 3px red, 6px 6px 3px black;
+      }
+    50% {
+        text-shadow: 2px 2px 3px black, 4px 4px 3px red, 6px 6px 200px black;
+    }
+    100%{
+        text-shadow: 2px 2px 3px black, 4px 4px 3px red, 6px 6px 3px black;
+    }
+}
