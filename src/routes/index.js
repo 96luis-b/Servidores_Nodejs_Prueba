@@ -3,7 +3,8 @@ const router = express.Router();
 
 router.get('/', (req, res)=>{
    // res.render('index', { title:'First Website'});  // se utiliza para renderizar el archivo del motor de plantillas y procesar codigo
-    res.render('index.html');
+    //res.render('index.html');
+    res.render('./public/views/index', { title:'First Website'});
 });
 
 router.get('/contact', (req, res)=>{
