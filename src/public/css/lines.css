@@ -1,0 +1,306 @@
+.box_line_1{
+    position: absolute;
+    left: 0;
+    height: 100px;
+    width: 95px;
+    overflow: hidden;
+}
+.box_line_2{
+    position: absolute;
+    top: 63px;
+    left: 95px;
+    width: 2px;
+    height: 30px;
+    overflow: hidden;
+}
+.box_line_3{
+    position: absolute;
+    top: 63px;
+    left: 95px;
+    width: 250px;
+    height: 2px;
+    overflow: hidden;
+}
+.box_line_4{
+    position: absolute;
+    top: 35px;
+    left: 345px;
+    width: 2px;
+    height: 29px;
+    overflow: hidden;
+}
+.box_line_5{
+    position: absolute;
+    top: 64px;
+    left: 345px;
+    width: 2px;
+    height: 29px;
+    overflow: hidden;
+}
+.box_line_6{
+    position: absolute;
+    top: 48px;
+    left: 340px;
+    width: 43px;
+    height: 2px;
+    transform: rotate(41deg);
+    overflow: hidden;
+}
+.box_line_7{
+    position: absolute;
+    top: 76px;
+    left: 341px;
+    width: 43px;
+    height: 2px;
+    transform: rotate(-41deg);
+    overflow: hidden;
+}
+.box_line_8{
+    position: absolute;
+    top: 63px;
+    left: 377px;
+    width: 962px;
+    height: 2px;
+    overflow: hidden;
+}
+
+
+.box_line_1, .line_1{
+    z-index: 2;
+}
+.box_line_2, .line_2{
+    z-index: 3;
+}
+.box_line_3, .line_3{
+    z-index: 4;
+}
+.box_line_4, .line_4{
+    z-index: 5;
+}
+.box_line_5, .line_5{
+    z-index: 6;
+}
+.box_line_6, .line_6{
+    z-index: 7;
+}
+.box_line_7, .line_7{
+    z-index: 8;
+}
+.box_line_8, .line_8{
+    z-index: 9;
+}
+
+.line_1{
+    position: absolute;
+    top: 75%;
+    left: 10px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#d80303);
+    animation: animate1 2s infinite;
+}
+.line_2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#d80303);
+    animation: animate2 2s infinite;    
+}
+.line_3{
+    position: absolute;
+    top: -16px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#d80303);
+    animation: animate3 2s infinite;    
+}
+.line_4{
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 100%;
+    height: 27px;
+    background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#d80303);
+    z-index: 5;
+    animation: animate4 2s infinite;    
+}
+.line_5{
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 100%;
+    height: 29px;
+    background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#d80303);
+    z-index: 6;
+    animation: animate5 2s infinite; 
+}
+.line_6{
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#d80303);
+    z-index: 7;
+    animation: animate6 2s infinite;    
+}
+.line_7{
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#d80303);
+    z-index: 8;
+    animation: animate7 2s infinite;    
+}
+.line_8{
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#ff0303);
+    z-index: 9;
+    animation: animate8 2s infinite;    
+}
+
+
+@keyframes animate1{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(230%);
+    }
+}
+
+@keyframes animate2{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes animate3{
+    0%{
+        transform: translateX(-280%);
+    }
+    100%{
+        transform: translateX(150%);
+    }
+}
+
+@keyframes animate4{
+    0%{
+        transform: translateY(450%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+@keyframes animate5{
+    0%{
+        transform: translateY(-450%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+@keyframes animate6{
+    0%{
+        transform: translateX(-750%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes animate7{
+    0%{
+        transform: translateX(-750%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+@keyframes animate8{
+    0%{
+        transform: translateX(-1200%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+
+/*
+.lienzo{
+    position: absolute;
+    top:30px;
+    left: 100px;
+    width: 70%;
+    height: 200px;
+    background: aqua;
+}
+
+.triangulo {
+	position: absolute;
+	top:15%;
+	left: 300px;
+    height:0px;
+	width:0px;
+	border-left: 100px solid #f0ad4e;
+	border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    opacity: 0;
+    transform-origin: 0% 30%;  
+    animation: un_latido 1s 3;   
+    
+}
+*/
+/*
+.pulso {
+	position: absolute;
+	top:35px;
+	left: 370px;
+    height:0px;
+    width:20px;
+	margin: 25px auto;
+	border-left: 20px solid #514ef0;
+	border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    transform: scale(1, 1);
+	transform-origin: 50% 50%;
+    animation: un_latido 2s infinite; 
+    
+}
+*/
+/*
+@keyframes un_latido{
+	0% {
+        transform: scale(0, 0);
+        opacity: 0;
+      }
+      20% {
+        transform: scale(1, 1);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: scale(3, 3);
+      }
+}
+*/
+
+
+   /* background: linear-gradient(to right, #0000008e, #000000d2,  #830000,#d80303,#d80303); */
+/*   sombra para lineas
+-webkit-box-shadow: 0px 0px 18px 11px rgba(255,3,3,0.73);
+-moz-box-shadow: 0px 0px 18px 11px rgba(255,3,3,0.73);
+box-shadow: 0px 0px 18px 11px rgba(255,3,3,0.73);
+*/

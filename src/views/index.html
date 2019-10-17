@@ -4,21 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--  <link rel="stylesheet" href="../../bootstrap-4.1.1-dist/css/bootstrap.min.css">   -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">     
-    <title>First Node Website HTML</title>
+    <title>Document</title>
+
+    <% include partials/head.ejs %>
+
 </head>
 <body>
-    <h1>
-        Hello World
-    </h1>
+    <div id="header" class="container">
+            <div class="box_line_1">
+                    <hr class="line_1">
+                </div>
+                <div class="box_line_2">
+                    <hr class="line_2">
+                </div>
+                <div class="box_line_3">
+                    <hr class="line_3">
+                </div>
+                <div class="box_line_4">
+                    <hr class="line_4">
+                </div>
+                <div class="box_line_5">
+                    <hr class="line_5">
+                </div>
+                <div class="box_line_6">
+                    <hr class="line_6">
+                </div>
+                <div class="box_line_7">
+                    <hr class="line_7">
+                </div>
+                <div class="box_line_8">
+                    <hr class="line_8">
+                </div>
+                <div class="lienzo">
+                    <div id="triangulo"></div>
+                </div>
+                
+        <div class="row align-items-start py-4 ">
+            <span id="logo_B" class="align-middle display-4 BSTube text_shadow_mult pr-1">B</span>
+            <span id="logo_S" class="align-middle display-4 BSTube text_shadow_mult latido_logo_S pr-1">S</span>
+            <span id="logo_T" class="align-middle display-4 BSTube text_shadow_mult latido_logo_T pr-1">T</span>
+            <span id="logo_u" class="align-middle display-4 BSTube text_shadow_mult latido_logo_u pr-1">u</span>
+            <span id="logo_b" class="align-middle display-4 BSTube text_shadow_mult latido_logo_b pr-1">b</span>
+            <span id="logo_e" class="align-middle display-4 BSTube text_shadow_mult latido_logo_e">e</span>
+        </div>
+    </div>
+    <div style="margin:0; padding: 0; width: 100%; height: 43rem">
+        <img src="./img/554f47d441b7a017e6fa05623ea38789.jpg" alt="" style="margin:0; padding: 0; width: 100%; height: 43rem; filter: contrast(125%);">        
+        <div class="">
+            <div class="search">
+                <div class="container  container_video_presentation" style="position: absolute; top: 120px; left: 100px">                   
+                    <div class="row">
+                        <div class="col p-5 align-self-center">
+                            <video autoplay muted class="video_dashboard" >
+                                <source src="./video/" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text_presentation_header text_shadow">
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10 text-center">
+                            <h3 class="align-middle text_presentation_header">
+                                <p>Agreganos como favorito a tu navegador de preferencia
+                                    <!--    <p class="display-4">Tí</p>   -->
+                                </p>
+                            </h3>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="container search_video">
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="input-group mb-3 col-8">
+                            <input type="text" class="form-control" placeholder="Escribe la URL del video de youtube" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-danger" type="button" id="button-addon2">Enviar!</button>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+                <div class="container text_presentation_footer text_shadow">
+                    <div class="row">
+                        <div class="col-1">
+                        </div>
+                        <div class="col-10 text-center">
+                            <h4>
+                                Y estaremos siempre serca de
+                                <p class="display-4">Tí</p>
+                            </h4>
+                            <!--
+                            <h4 class="">
+                                Somos tu mejor opcion para la descarga de cualquier video, el libre y rápido convertidor de Youtube en 
+                                <strong class="h2">mp3</strong> 
+                                ,
+                                <strong class="h2">mp4</strong>  
+                                y otros formatos.
+                            </h4>
+                        -->
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+            </div>
+    
+          
+        </div>    
+    </div>
+    
+    <div class="container file">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                </div>  
+                <div class="col-10 text-start">
+                    <p><h1 id="file_name" class="file_name text_shadow align-items-start">Titulo:</h1></p>
+                </div>
+                <div class="col-1">
+                </div> 
+            </div>
+        </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-1"></div>
+                <div class="col-5">
+                    <div align="align-items-start">
+                        <video controls="true" loop class="video rounded-lg embed-responsive-item" style="width: 100%; height: 220px; border-radius: 100px 30px 20px 20px; outline: none; text-align:center; box-shadow: 3px 3px 7px black;">
+                            <source src="./video/HERMOSO VIDEO - Cuestión de actitud.mp4" type="video/mp4">
+                        </video>
+                    </div> 
+                </div>
+                <div class="col-6 text-center p-5">
+                    <form action="" class="pb-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1" class="h2 text_shadow" style="font-family: 'Righteous', cursive;">
+                                Formato de descarga:
+                            </label>
+                            <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+<!--
+audio: mp3, aac, ogg, m4a, wma, flac, wav
+video: mp4, m4v, mov, flv, avi, mpg, wmv
+-->
 
-    <nav>
-        <ul>
-            <li> <a href="/">Index</a> </li>
-            <li> <a href="/contact">Contact</a> </li>
-        </ul>
-    </nav>
+
+                            </select>
+                        </div>
+                    </form>
+                    <button class="btn btn-danger">Descargar</button>
+                    <button class="btn btn-danger">convertir otro video</button>
+                </div>
+            </div>   
+        </div> 
+    </div>    
+
+    <div class="container align-items-center p-5">
+        <div class="row">
+            <div class="col text-center">
+                <button type="submit" class="btn btn-danger">Donaciones</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
