@@ -7,15 +7,23 @@ const path = require('path');
 // settings
 app.set('port', 3000);
 app.set('views', path.join(__dirname, 'views'));
-// app.engine('html', require('ejs').renderFile);   //esta configuracion sirve para que el motor de plantillas ejs procese directamente los archivos html
+ app.engine('html', require('ejs').renderFile);   //esta configuracion sirve para que el motor de plantillas ejs procese directamente los archivos html
     // settings view engine  agregar nuevas funcionalidades
     //      a las ventalas html
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
 
 // middlewares
 
+// static files
+app.use(express.static(path.join(__dirname, 'public/css')));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 // routes
-app.use(require('../routes/index'));
+//app.use(require('../routes/index'));
+app.get('/',(req, res)=>{
+    res.sendFile(path.join(__dirname,"./views/index.html"));
+})
 
 /*
 app.get('/', (req, res)=>{
@@ -25,8 +33,6 @@ app.get('/', (req, res)=>{
 });
 */
 
-// static files
-app.use(express.static(path.join(__dirname, 'public')));
 
 
 // listening the server
