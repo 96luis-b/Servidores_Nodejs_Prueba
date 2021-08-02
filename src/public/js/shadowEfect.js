@@ -8,7 +8,6 @@ $(document).ready(function(){
     	paret[i-1].childNodes[1].classList.add(`line_${i}`);
     	//paret[i].children() = `line_${i}`;
     }
-   console.log(paret)
     setTimeout(function(){$('#logo_B').addClass('latido_logo');}, 500);
     setTimeout(function(){$('#logo_S').addClass('latido_logo');}, 550);
     setTimeout(function(){$('#logo_T').addClass('latido_logo');}, 600);
