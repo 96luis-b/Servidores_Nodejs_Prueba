@@ -4,6 +4,7 @@
 $(document).ready(function(){
     $(".alert").alert('close');
 
+    // evento onclick, para el inicio de la busqueda
     $("#button-addon2").click(function(){
 
     let string = $("#inputSearch").val();  //variable que contiene el valor de la palabra clave que se quiere buscar
@@ -63,14 +64,14 @@ let createContainerVideo = (n, video)=>{    //metodo para la creacion del conten
     if(video.id.videoId==undefined){    //validacion de existencia de videoId, donde se evita pasar un valor indefinido
         return;
     }else{
-        containerVideo.innerHTML = `${containerVideo.innerHTML}<br>${insertTagIframe(n, video)}`   //insercion de script html para la creacion de los contenedores de videos     
+        containerVideo.innerHTML = containerVideo.innerHTML+"<br>"+insertTagIframe(n, video)   //insercion de script html para la creacion de los contenedores de videos     
     }
     return;
 }
 
 let createContainerSingleVideo = (n, video)=>{
     let containerVideo = document.getElementById("containerVideo");
-    containerVideo.innerHTML = `${containerVideo.innerHTML}<br>${insertSingleVideo(n, video)}`
+    containerVideo.innerHTML = containerVideo.innerHTML+"<br>"+insertSingleVideo(n, video)
 }
 
 let checkListVideo = ()=>{
@@ -83,7 +84,7 @@ let scanValueSearch = (string)=>{
     if (string.indexOf("http")>-1 && string.indexOf("youtube")>-1 &&string.indexOf("watch")>-1) {
         return {url:scanValue(string),check:false};
     }
-    return {url:`${client.base_URL}search?part=snippet&q=${string}&key=${client.client_secret}`,check:true};
+    return {url:client.base_URL+"search?part=snippet&q="+string+"&key="+client.client_secret,check:true};
 }
 
 
@@ -91,7 +92,7 @@ let scanValue = (string)=>{
         let chunks = string.split("=");
         let video = {id:{videoId:chunks[1]}}
         console.log(video)
-        return {url:`${client.base_URL}videos?part=snippet&id=${video.id.videoId}&key=${client.client_secret}`,check:false};
+        return {url:client.base_URL+"videos?part=snippet&id="+video.id.videoId+"&key="+client.client_secret,check:false};
     
 }
 
