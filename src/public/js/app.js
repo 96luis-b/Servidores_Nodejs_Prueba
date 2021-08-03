@@ -4,6 +4,7 @@
 $(document).ready(function(){
     $(".alert").alert('close');
 
+    let url;
     // evento onclick, para el inicio de la busqueda
     $("#button-addon2").click(function(){
 
@@ -12,8 +13,8 @@ $(document).ready(function(){
         alert("Rellena el cuadro de texto");
         return
     }
-    let url = scanValueSearch(string);
-
+    url = scanValueSearch(string);
+    console.log(url)
     if(url.check){
         request(url.url,createTagIframe,true);
         //createTagIframe(response.pageInfo.resultsPerPage, response.items, true);  //instacia del metodo createTagIframe para la creacion de los elementos que contendran los archivos
@@ -27,18 +28,20 @@ $(document).ready(function(){
 
 let request = (url, callback,check)=>{
     if ($("#containerVideo").find("div").length>0) {
-        console.log($(containerVideo).find("div").length)
+        // console.log($(containerVideo).find("div").length)
         $(containerVideo).empty();
-        console.log($(containerVideo).find("div").length)
+        // console.log($(containerVideo).find("div").length)
     }
     fetch(`${url}`, {mode: 'cors'})    //peticion con metodo fetch a url de youtube correrpondiente
     .then(function(response) {
+        if(response.status != 200 ){
+            throw "Ha ocurrido un error: " + response.status
+        }
+        console.log(response)
         return response.text();
     })
     .then(function(data) {  //promesa que procesa la respuesta obtenida 
-        console.log('Request successful');
         let response = JSON.parse(data);    //parse a json la respuesta que viene en texto plano
-        console.log(response);
         if (check) {
             callback(response.pageInfo.resultsPerPage,response.items);
         }else{
@@ -97,9 +100,15 @@ let scanValue = (string)=>{
 }
 
 let deleteChildren = ()=>{
-    let containerVideo = document.getElementById("containerVideo");
-    $(containerVideo).empty();
+    // let containerVideo = document.getElementById("containerVideo");
+    $("#containerVideo").empty();
+    // $(containerVideo).empty();
 }
+
+let donwloadVideo = (idVideo)=>{
+    window.open(`https://www.youtubepp.com/watch?v=${idVideo}`)
+}
+
 
 /*
     https://www.youtube.com/watch?v=ZY5QbEjAMFQ
@@ -110,3 +119,5 @@ let deleteChildren = ()=>{
     https://www.googleapis.com/youtube/v3/search?part=snippet&id=dZNv9KMKO-E&key=AIzaSyAEED7JtdhD4fPg-jWR2DlrZoK2Fj_JWNA
     https://www.googleapis.com/youtube/v3/videos?part=snippet&id=dZNv9KMKO-E&key=AIzaSyAEED7JtdhD4fPg-jWR2DlrZoK2Fj_JWNA
     */
+
+

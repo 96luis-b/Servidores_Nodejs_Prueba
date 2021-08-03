@@ -1,5 +1,6 @@
 $(document).ready(function(){
     let paret = $("#header").children();
+    $("#header").css("visibility", "visible");
    	//firstChildren.addClass("box_line_1");
    	//firstChildren.children().addClass("line_1");
  

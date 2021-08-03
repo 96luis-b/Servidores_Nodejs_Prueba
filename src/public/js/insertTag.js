@@ -1,12 +1,12 @@
 
 let insertTagIframe = (n, video)=>{
-    console.log(document.getElementById("containerVideo"));
     let tag =
     `   <iframe id="player${n}" class="card-img col-3" type="text/html" width="100%" height="200rem" 
     src="http://www.youtube.com/embed/${video.id.videoId}?enablejsapi=1&origin=http://example.com"
     frameborder="0"></iframe>   `
     return insertTagCard(tag, video.snippet.title, video.snippet.description);
 }
+
 
 let insertTagCard = (iframe, videoTitle, videoDescrip)=>{
     let tagTitle, tagDescrip;
@@ -59,23 +59,7 @@ src="http://www.youtube.com/embed/${video.items[0].id}?enablejsapi=1&origin=http
 frameborder="0"></iframe>
                 </div>
                 <div class="col-4 text-center">
-                    <form action="" class="pb-3">
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1" class="h2 text_shadow" style="font-family: 'Righteous', cursive;">
-                                Formato de descarga:
-                            </label>
-                            <select class="form-control form-control-lg" id="exampleFormControlSelect1">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-
-                            </select>
-                        </div>
-                    </form>
-                    <button class="btn btn-danger">Descargar</button>
-                    <button class="btn btn-danger">convertir otro video</button>
+                    <button onClick="donwloadVideo('${video.items[0].id}')" class="btn btn-danger">Descargar</button>
                 </div>
             </div>   
         </div> `

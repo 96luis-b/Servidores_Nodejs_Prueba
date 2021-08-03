@@ -156,6 +156,9 @@ header{
     font-family: 'Righteous', cursive;
 }
 
+.header{
+    visibility: hidden;
+}
 
 /*
 font-family: 'Indie Flower', cursive;
